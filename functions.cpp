@@ -126,7 +126,7 @@ intervalarth::interval f_interval(int i, intervalarth::interval x[])
     switch(i)
     {
         case 0:
-            return (two*(x[0]^2)) + x[1] + x[2];
+            return (two*(x[0]*x[0])) + x[1] + x[2];
             break;
         case 1:
             return (x[0]*x[1]) - x[2] + two;
