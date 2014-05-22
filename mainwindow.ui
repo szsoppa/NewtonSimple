@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -590,7 +590,7 @@
         <x>450</x>
         <y>40</y>
         <width>608</width>
-        <height>60</height>
+        <height>101</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -623,14 +623,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_omega_2L">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_omega_L"/>
          </item>
          <item>
           <widget class="QLabel" name="label_25">
@@ -646,14 +639,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_omega_2R">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_omega_R"/>
          </item>
         </layout>
        </item>
@@ -673,6 +659,19 @@
           </widget>
          </item>
          <item>
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QLabel" name="label_33">
            <property name="font">
             <font>
@@ -686,14 +685,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_eps_2L">
-           <property name="decimals">
-            <number>16</number>
-           </property>
-           <property name="maximum">
-            <double>100.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_eps_L"/>
          </item>
          <item>
           <widget class="QLabel" name="label_34">
@@ -709,14 +701,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_eps_2R">
-           <property name="decimals">
-            <number>16</number>
-           </property>
-           <property name="maximum">
-            <double>100.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_eps_R"/>
          </item>
         </layout>
        </item>
@@ -727,8 +712,8 @@
        <rect>
         <x>160</x>
         <y>40</y>
-        <width>279</width>
-        <height>113</height>
+        <width>276</width>
+        <height>111</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -761,14 +746,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_x0_2L">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_x0_L"/>
          </item>
          <item>
           <widget class="QLabel" name="label_23">
@@ -784,14 +762,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_x0_2R">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_x0_R"/>
          </item>
         </layout>
        </item>
@@ -824,14 +795,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_x1_2L">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_x1_L"/>
          </item>
          <item>
           <widget class="QLabel" name="label_27">
@@ -847,14 +811,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_x1_2R">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_x1_R"/>
          </item>
         </layout>
        </item>
@@ -887,14 +844,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_x2_2L">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_x2_L"/>
          </item>
          <item>
           <widget class="QLabel" name="label_31">
@@ -910,14 +860,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QDoubleSpinBox" name="doubleSpinBox_x2_2R">
-           <property name="minimum">
-            <double>-1000.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1000.000000000000000</double>
-           </property>
-          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_x2_R"/>
          </item>
         </layout>
        </item>

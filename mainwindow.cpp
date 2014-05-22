@@ -35,11 +35,11 @@ void MainWindow::on_pushButton_clicked() // calculate 1
 
     Newtonsimple(n,x,omega,eps,mit,it,st);
 
-    stream << fixed << setprecision( 15 ) << x[0];
+    stream << scientific << x[0];
     x0 = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 15 ) << x[1];
+    stream << scientific <<  x[1];
     x1 = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 80 ) << x[2];
+    stream << scientific <<  x[2];
     x2 = stream.str();  stream.str( string() );  stream.clear();
 
     ui->lineEdit_x0_1->setText(QString::fromStdString(x0));
@@ -63,6 +63,7 @@ void MainWindow::on_pushButton_2_clicked() // reset 1
 
 void MainWindow::on_pushButton_3_clicked()
 {
+    QString qs;
     int n, it, st, mit;
 
     stringstream stream;
@@ -74,32 +75,44 @@ void MainWindow::on_pushButton_3_clicked()
     intervalarth::interval *x = new intervalarth::interval[n];
     intervalarth::interval omega, eps;
 
-    x[0].a = static_cast <long double> (ui->doubleSpinBox_x0_2L->value());
-    x[0].b = static_cast <long double> (ui->doubleSpinBox_x0_2R->value());
-    x[1].a = static_cast <long double> (ui->doubleSpinBox_x1_2L->value());
-    x[1].b = static_cast <long double> (ui->doubleSpinBox_x1_2R->value());
-    x[2].a = static_cast <long double> (ui->doubleSpinBox_x2_2L->value());
-    x[2].b = static_cast <long double> (ui->doubleSpinBox_x2_2R->value());
+    qs = ui->plainTextEdit_x0_L->toPlainText();
+    x[0].a = LeftRead( qs.toStdString() );
+    qs = ui->plainTextEdit_x0_R->toPlainText();
+    x[0].b = RightRead( qs.toStdString() );
+    
+    qs = ui->plainTextEdit_x1_L->toPlainText();
+    x[1].a = LeftRead( qs.toStdString() );
+    qs = ui->plainTextEdit_x1_R->toPlainText();
+    x[1].b = RightRead( qs.toStdString() );
 
-    omega.a = static_cast <long double> (ui->doubleSpinBox_omega_2L->value());
-    omega.b = static_cast <long double> (ui->doubleSpinBox_omega_2R->value());
+    qs = ui->plainTextEdit_x2_L->toPlainText();
+    x[2].a = LeftRead( qs.toStdString() );
+    qs = ui->plainTextEdit_x2_R->toPlainText();
+    x[2].b = RightRead( qs.toStdString() );
+    
+    qs = ui->plainTextEdit_omega_L->toPlainText();
+    omega.a = LeftRead( qs.toStdString() );
+    qs = ui->plainTextEdit_omega_R->toPlainText();
+    omega.b = RightRead( qs.toStdString() );
 
-    eps.a = static_cast <long double> (ui->doubleSpinBox_eps_2L->value());
-    eps.b = static_cast <long double> (ui->doubleSpinBox_eps_2R->value());
+    qs = ui->plainTextEdit_eps_L->toPlainText();
+    eps.a = LeftRead( qs.toStdString() );
+    qs = ui->plainTextEdit_eps_R->toPlainText();
+    eps.b = RightRead( qs.toStdString() );
 
     Newtonsimple_interval(n,x,omega,eps,mit,it,st);
 
-    stream << fixed << setprecision( 16 ) << x[0].a;
+    stream << scientific << setprecision( 16 ) << x[0].a;
     x0L = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 16 ) << x[0].b;
+    stream << scientific << setprecision( 16 ) << x[0].b;
     x0R = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 16 ) << x[1].a;
+    stream << scientific << setprecision( 16 ) << x[1].a;
     x1L = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 16 ) << x[1].b;
+    stream << scientific << setprecision( 16 ) << x[1].b;
     x1R = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 16 ) << x[2].a;
+    stream << scientific << setprecision( 16 ) << x[2].a;
     x2L = stream.str();  stream.str( string() );  stream.clear();
-    stream << fixed << setprecision( 16 ) << x[2].b;
+    stream << scientific << setprecision( 16 ) << x[2].b;
     x2R = stream.str();  stream.str( string() );  stream.clear();
 
     ui->lineEdit_x0_2L->setText(QString::fromStdString(x0L));

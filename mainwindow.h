@@ -10,6 +10,9 @@
 
 #include "functions.h"
 
+#define LeftRead(x) intervalarth::IntervalArithmetic::LeftRead(x)
+#define RightRead(x) intervalarth::IntervalArithmetic::RightRead(x)
+
 namespace Ui {
 class MainWindow;
 }
